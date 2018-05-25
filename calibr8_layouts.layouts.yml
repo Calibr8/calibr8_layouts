@@ -1,0 +1,14 @@
+calibr8_twocol:
+  label    : "Columns: 2"
+  category : Calibr8 Panels
+  template : layouts/twocol/twocol
+  icon     : layouts/twocol/twocol.png
+  regions:
+    content_top:
+      label: Content top
+    content:
+      label: Content
+    sidebar:
+      label: Sidebar
+    content_bottom:
+      label: Content Bottom

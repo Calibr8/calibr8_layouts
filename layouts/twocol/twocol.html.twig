@@ -1,0 +1,25 @@
+<!-- ### Custom Calibr8 Layout: twocol ### -->
+
+{%  set layout_classes = ['panels-layout--base-twocol'] %}
+{%  if not sidebar_empty %}
+  {% set layout_classes = layout_classes|merge(['has-sidebar']) %}
+{% else %}
+  {% set layout_classes = layout_classes|merge(['no-sidebar']) %}
+{% endif %}
+
+<div class="{{ layout_classes|join(' ') }}">
+
+  {%  if not content_top_empty %}
+    <div class="panels-region--content-top">{{ content.content_top }}</div>
+  {% endif %}
+  {%  if not content_empty %}
+    <div class="panels-region--content">{{ content.content }}</div>
+  {% endif %}
+  {%  if not sidebar_empty %}
+    <aside class="panels-region--sidebar">{{ content.sidebar }}</aside>
+  {% endif %}
+  {%  if not content_bottom_empty %}
+    <div class="panels-region--bottom">{{ content.content_bottom }}</div>
+  {% endif %}
+
+</div>
